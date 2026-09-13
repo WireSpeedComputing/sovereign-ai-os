@@ -125,3 +125,9 @@ Absence from this public router does **not** mean a private component does not e
 This parent repository is being established as the single maintained public cross-program orientation surface. Child repositories remain authoritative for their own implementation. Cross-program umbrella material previously living in Sovereign Memory Core will be reduced to compatibility pointers after this parent is accepted.
 
 The project deliberately favors useful capability over governance theater: frontier models for architecture/security/judgment, local and cheaper models for bounded execution, and review depth proportional to consequence.
+
+## License
+
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). See
+[LICENSE](LICENSE). Contributions are accepted under the Developer Certificate
+of Origin. See [DCO.md](DCO.md).
