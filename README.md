@@ -217,5 +217,23 @@ for their own implementation.
 
 Copyright 2026 Jesse Ryski.
 
-This parent repository is licensed under the Apache License, Version 2.0.
-See [`LICENSE`](LICENSE). Child-repo licensing is separate.
+The documents in this repository are licensed under Creative Commons
+Attribution 4.0 International. See [`LICENSE`](LICENSE).
+
+The executable tooling is licensed under the Apache License, Version 2.0.
+See [`LICENSE-CODE`](LICENSE-CODE). That scope is:
+
+- `scripts/validate_parent.py`
+- `.github/workflows/ci.yml`
+
+Each carries an SPDX identifier, and `validate_parent.py` checks that the
+list above and the identifiers agree. This list is the authoritative scope
+map: add executable tooling to it rather than assuming it is exhaustive by
+construction.
+
+Creative Commons does not recommend its licenses for software. Both licenses
+disclaim warranties, so that is not the distinction; Apache-2.0 adds an
+express patent grant and the software-specific terms reusers expect.
+
+Contributions are accepted under the Developer Certificate of Origin. See
+[`DCO.md`](DCO.md). Child-repo licensing is separate.

@@ -7,9 +7,13 @@ OS. It is not a monorepo, not a second implementation authority, and not
 a planning database. Implementation belongs in the owning public child
 repository named by [`ROUTES.md`](ROUTES.md).
 
-By contributing, you agree that your contributions are licensed under
-the Apache License 2.0. See [`LICENSE`](LICENSE). Child repositories may
-use different licenses.
+By contributing, you agree that your contribution is licensed under the
+license that applies to the file you are changing: [`LICENSE`](LICENSE),
+Creative Commons Attribution 4.0 International, for documents, and
+[`LICENSE-CODE`](LICENSE-CODE), Apache License 2.0, for the executable
+tooling listed in [`README.md`](README.md#license). Contributions are
+accepted under the Developer Certificate of Origin; see [`DCO.md`](DCO.md).
+Child repositories may use different licenses.
 
 ## Read first
 

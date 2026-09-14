@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Jesse Ryski
 """Tier-1 validation for the public parent routing surface.
 
 ALLOWLIST DESIGN
@@ -81,7 +83,7 @@ CONTRIBUTION_KINDS = frozenset({"orientation", "generic-upstream"})
 # the commit that contains it. Other Markdown may cite a historical SHA
 # when the line does not claim that the containing artifact is current.
 ROUTER_NO_SHA_FILES = frozenset({"CONTEXT.md"})
-LINE_LENGTH_EXEMPT = frozenset({"THESIS.md", "HORIZON.md", "LICENSE"})
+LINE_LENGTH_EXEMPT = frozenset({"THESIS.md", "HORIZON.md", "LICENSE", "LICENSE-CODE"})
 PROSE_LINE_LENGTH = 120
 
 SHA_RE = re.compile(r"\b[0-9a-f]{40}\b", re.IGNORECASE)
@@ -119,7 +121,7 @@ SHA_CURRENCY_LINE_RE = re.compile(
 ALLOWED_GITHUB_PROFILES = frozenset({"jryski"})
 
 TEXT_SUFFIXES = {".md", ".yml", ".yaml", ".toml", ".py", ".txt"}
-TEXT_NAMES = {"LICENSE"}
+TEXT_NAMES = {"LICENSE", "LICENSE-CODE"}
 
 
 def rel(path: Path) -> str:
@@ -253,6 +255,12 @@ def in_code_or_table(line: str, in_fence: bool) -> tuple[bool, bool]:
     return False, in_fence
 
 
+APACHE_SCOPE = (
+    "scripts/validate_parent.py",
+    ".github/workflows/ci.yml",
+)
+
+
 def check_required_files(errors: list[str]) -> None:
     for name in REQUIRED_FILES:
         path = ROOT / name
@@ -261,12 +269,35 @@ def check_required_files(errors: list[str]) -> None:
     license_text = (ROOT / "LICENSE").read_text(encoding="utf-8") if (
         ROOT / "LICENSE"
     ).is_file() else ""
-    if "Apache License" not in license_text or "Version 2.0" not in license_text:
-        errors.append("LICENSE is not Apache License Version 2.0 text")
+    if "Creative Commons Attribution 4.0" not in license_text:
+        errors.append("LICENSE is not Creative Commons Attribution 4.0 text")
+    code_license_text = (ROOT / "LICENSE-CODE").read_text(encoding="utf-8") if (
+        ROOT / "LICENSE-CODE"
+    ).is_file() else ""
+    if (
+        "Apache License" not in code_license_text
+        or "Version 2.0" not in code_license_text
+    ):
+        errors.append("LICENSE-CODE is not Apache License Version 2.0 text")
+    for name in APACHE_SCOPE:
+        path = ROOT / name
+        if not path.is_file():
+            errors.append(f"declared Apache-2.0 scope file is missing: {name}")
+        elif "SPDX-License-Identifier: Apache-2.0" not in path.read_text(
+            encoding="utf-8"
+        ):
+            errors.append(f"{name}: missing SPDX-License-Identifier: Apache-2.0")
+
+
+VERBATIM_LICENSE_TEXTS = frozenset({"LICENSE", "LICENSE-CODE"})
 
 
 def check_final_newlines(errors: list[str]) -> None:
     for path in iter_text_files():
+        # Canonical license texts are reproduced byte-for-byte from their
+        # stewards. Never reformat them to satisfy a whitespace rule.
+        if rel(path) in VERBATIM_LICENSE_TEXTS:
+            continue
         data = path.read_bytes()
         if not data:
             errors.append(f"{rel(path)}: empty file")
