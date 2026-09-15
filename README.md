@@ -1,5 +1,7 @@
 # Sovereign AI OS
 
+**New here? [Choose a project, try a synthetic demo, or find a way to contribute](START-HERE.md).**
+
 **A sovereign operating substrate for people and organizations in an age of abundant intelligence.**
 
 Sovereign AI OS is a long-lived, owner-controlled foundation for AI that preserves durable meaning, evidence, authority, context, work, and action history while models, vendors, applications, runtimes, and storage systems remain replaceable.
@@ -52,11 +54,13 @@ This parent exists because the program is implemented across multiple bounded re
 
 | Component | Role in the program |
 | --- | --- |
+| **[Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol)** | Public protocol drafts for provenance, custody, authority and portability. Publication is not conformance acceptance. |
 | **[Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core)** | PostgreSQL reference implementation, custody/recovery/conformance proof, adversarial testing, and portable implementation evidence. |
 | **[Supabase User MCP](https://github.com/jryski/Supabase_user_MCP)** | Principal-bound runtime data plane for users and agents, including identity, narrow capabilities, and database-enforced authorization. |
 | **[Household OS](https://github.com/jryski/Household-OS)** | Public household-domain reference architecture and synthetic patterns for shared household knowledge, planning, assets, events, and integrations. |
 | **[Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault)** | Public multi-user business-domain reference architecture and downstream business dogfood surface. |
 | **[Public AI Skills](https://github.com/jryski/Public_AI_SKills)** | Portable, inspectable AI operating behaviors and skills that can be used across models and runtimes. |
+| **[Agent Coordination](https://github.com/jryski/Agent-Coordination)** | Early public placeholder for agent coordination work; not a published deployment method yet. |
 
 There are additional private and operational components for protocol/specification work, runtime/orchestration, deployment overlays, model qualification, ingestion, recovery, and review. Those private repositories are intentionally **not named or linked from this public parent by default**. Their absence here is a disclosure boundary, not evidence that they do not exist.
 

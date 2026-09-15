@@ -6,6 +6,9 @@ It is **not** a status database, permission file, or complete inventory. Private
 
 | Concern | Public route | Authority there |
 | --- | --- | --- |
+| Newcomer orientation, supported starting paths and contribution ideas | [Start here](START-HERE.md) | Dated public orientation; component documentation remains authoritative |
+| Protocol semantics, provenance, custody and portability | [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | Public specification drafts and their stated acceptance limits |
+| Agent deployment and coordination project | [Agent Coordination](https://github.com/jryski/Agent-Coordination) | Early placeholder; no implementation or deployment claim |
 | Program purpose and invariant principles | [`THESIS.md`](THESIS.md) | This parent thesis for public program orientation |
 | Plausible future / bridge to possible | [`HORIZON.md`](HORIZON.md) | Directional horizon only, not current-state evidence |
 | PostgreSQL reference implementation, custody, recovery, conformance, adversarial evidence | [`jryski/sovereign-memory-core`](https://github.com/jryski/sovereign-memory-core) | Repository code, tests, status, releases, exact-head evidence |
@@ -13,7 +16,7 @@ It is **not** a status database, permission file, or complete inventory. Private
 | Public household-domain architecture and synthetic household patterns | [`jryski/Household-OS`](https://github.com/jryski/Household-OS) | Household reference schemas/contracts/tests only |
 | Public business-domain reference architecture | [`WireSpeedComputing/Sovereign-Vault`](https://github.com/WireSpeedComputing/Sovereign-Vault) | Generic business schemas/contracts/tests only |
 | Reusable AI skills | [`jryski/Public_AI_SKills`](https://github.com/jryski/Public_AI_SKills) | Skill specifications, versions, usage/license terms |
-| Public parent routing/orientation | [`jryski/sovereign-ai-os`](https://github.com/jryski/sovereign-ai-os) | Routing and public program orientation only |
+| Public parent routing/orientation | [`WireSpeedComputing/sovereign-ai-os`](https://github.com/WireSpeedComputing/sovereign-ai-os) | Routing and public program orientation only |
 
 ## Private and operational coverage
 
@@ -25,7 +28,7 @@ They are intentionally not named here by default. A task that requires private c
 
 Use the narrowest owning component:
 
-- **Protocol/meaning question:** follow the accepted protocol/specification route from authorized program context. Do not infer protocol semantics from a deployment repository.
+- **Protocol/meaning question:** start with the public SMP repository and its stated draft/acceptance boundaries. Do not infer protocol semantics from a deployment repository.
 - **PostgreSQL behavior or custody proof:** Core.
 - **User/agent identity, capability, RLS/runtime access:** User MCP.
 - **Household ontology, school, assets, family planning, home integrations:** Household OS.
