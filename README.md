@@ -1,180 +1,87 @@
 # Sovereign AI OS
 
-**A sovereign operating substrate for people and organizations in an age
-of abundant intelligence.**
+User-controlled records and bounded tools that work across AI assistants.
 
-Sovereign AI OS is a long-lived, owner-controlled foundation for AI that
-preserves durable meaning, evidence, authority, context, work, and
-action history while models, vendors, applications, runtimes, and
-storage systems remain replaceable.
+**[Start here: choose a project, try a synthetic demo, or contribute](START-HERE.md).**
 
-This is a **functional sovereignty project**, not a startup thesis or
-financial endeavor. The goal is to build infrastructure that can grow
-with AI for decades without requiring a person, household, or
-organization to surrender its accumulated context to whichever vendor
-has the best assistant this year.
+WIRE SPEED COMPUTING LLC maintains this program, led by Jesse Ryski.
+The goal is to keep evidence, decisions, permissions and work history useful
+when models, applications or providers change.
 
-> **If intelligence becomes cheap, abundant, persistent, multimodal,
-> agentic, networked, and eventually embodied, what infrastructure must
-> a human or organization own so that intelligence reliably acts in
-> their interest?**
+[Website](https://www.wirespeedcomputers.com/) |
+[Component routes](ROUTES.md) | [Project principles](THESIS.md)
 
-This repository is the public front door to that work.
+## What we are building
 
-## Start here
+1. Keep source evidence, changes and decisions in a store the owner controls.
+2. Give each authorized person or agent a limited path to that data.
+3. Build household and business workflows on those foundations.
+4. Reuse existing models, standards and services where they fit.
 
-Humans can read in this order. Agents should follow
-[`CONTEXT.md`](CONTEXT.md) first (routes before thesis or horizon
-payload).
+Household OS is the household operating layer, not merely a calendar connector.
+Its intended experience includes preparation, coordination, reminders and
+approved actions using durable household context. A school notice becoming a
+reviewable calendar suggestion is one useful example, not a claim that the
+complete public product exists.
 
-1. **[THESIS.md](THESIS.md)** — why the project exists and the
-   principles that should survive changes in technology.
-2. **[HORIZON.md](HORIZON.md)** — the plausible future the architecture
-   is trying to keep open. This is directional, not a claim about
-   current capability.
-3. **[ROUTES.md](ROUTES.md)** — where public implementation concerns
-   live and which repository owns them.
-4. **[CONTEXT.md](CONTEXT.md)** — a thin, non-normative routing guide
-   for new AI agents and contributors.
-5. **[decisions/](decisions/)** — concise public decision pointers. They
-   summarize rulings; they do not create authority.
-6. **[CONTRIBUTING.md](CONTRIBUTING.md)** — how generic upstream work
-   enters, including the downstream-dogfood path.
-7. **[SECURITY.md](SECURITY.md)** — how to report problems without
-   publishing private payload.
+Household and business deployments are peers. Their schemas, permissions and
+integrations may differ. A provider-neutral frontend is a direction, not a
+delivered application.
 
-## The progression
+## SMP is the foundation
 
-The repositories make more sense as an evolutionary dependency chain
-than as independent projects:
+Sovereign Memory Protocol began this work: preserving bytes is not enough if
+their sources, meaning, authority and change history disappear when you move.
+SMP develops implementation-neutral rules for that evidence. Core is a
+PostgreSQL reference implementation; it is not the protocol itself.
 
-```text
-sovereign memory / protocol semantics
-        ↓
-reference implementation + recovery/conformance proof
-        ↓
-principal-bound user/agent data access
-        ↓
-household and business domain deployments
-        ↓
-planning + context + worker/runtime routing
-        ↓
-presentation and presence
-        ↓
-ambient stewardship
-        ↓
-sanitized steward-to-steward exchange
-        ↓
-external agent/service networks
-        ↓
-physical sensing and actuation where useful
-```
+Memory engines can supply retrieval and ranking. They do not determine access
+rights or turn model inference into accepted fact. We aim to integrate useful
+existing tools, not replace every assistant or memory engine.
 
-Not every layer is implemented yet. Some capabilities have not been
-invented yet. The architectural goal is to build useful capability now
-while leaving clean seams for the frontier to evolve.
+## Public components
 
-## Public component repositories
-
-This parent exists because the program is implemented across multiple
-bounded repositories. The important public components are:
-
-| Component | Role in the program |
+| Component | Purpose and starting point |
 | --- | --- |
-| **[Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core)** | PostgreSQL reference implementation, custody/recovery/conformance proof, adversarial testing, and portable implementation evidence. |
-| **[Supabase User MCP](https://github.com/jryski/Supabase_user_MCP)** | Principal-bound runtime data plane for users and agents, including identity, narrow capabilities, and database-enforced authorization. |
-| **[Household OS](https://github.com/jryski/Household-OS)** | Public household-domain reference architecture and synthetic patterns for shared household knowledge, planning, assets, events, and integrations. |
-| **[Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault)** | Public multi-user business-domain reference architecture and downstream business dogfood surface. |
-| **[Public AI Skills](https://github.com/jryski/Public_AI_SKills)** | Portable, inspectable AI operating behaviors and skills that can be used across models and runtimes. |
+| [Household OS](https://github.com/jryski/Household-OS) | Household reference architecture, workflows and synthetic integration examples. |
+| [Supabase User MCP](https://github.com/jryski/Supabase_user_MCP) | Bounded application-data access. Follow its documented synthetic demo and supported-client limits. |
+| [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | Public protocol drafts for provenance, custody, authority and portability. Draft publication is not conformance acceptance. |
+| [Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core) | PostgreSQL reference implementation, tests and scope-specific recovery evidence. |
+| [Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault) | Business-domain data layer with its own policy and identity boundaries. |
+| [Agent Coordination](https://github.com/jryski/Agent-Coordination) | Early public project for coordination work; do not assume a published deployment method. |
+| [Public AI Skills](https://github.com/jryski/Public_AI_SKills) | Reusable working methods. Check the separate personal and organizational-use terms. |
 
-There are additional private and operational components for
-protocol/specification work, runtime/orchestration, deployment overlays,
-model qualification, ingestion, recovery, and review. Those private
-repositories are intentionally **not named or linked from this public
-parent by default**. Their absence here is a disclosure boundary, not
-evidence that they do not exist.
+Component repositories own their supported behavior, tests, releases and known
+limitations. Public source, passing tests, deployment and independent acceptance
+are different states. This parent does not certify a production-ready bundle.
 
-For task-level routing and authority boundaries, see
-**[ROUTES.md](ROUTES.md)**.
+## Where to begin
 
-## What this parent repository is
+- [START-HERE.md](START-HERE.md): practical starting paths and contribution ideas.
+- [ROUTES.md](ROUTES.md): which repository owns each concern.
+- [CONTEXT.md](CONTEXT.md): bounded routing for agents.
+- [THESIS.md](THESIS.md): purpose and design principles.
+- [HORIZON.md](HORIZON.md): future possibilities, not present features.
+- [CONTRIBUTING.md](CONTRIBUTING.md): public-safe contributions and review.
+- [SECURITY.md](SECURITY.md): report security concerns privately.
 
-This repository exists to answer:
+Read the owning component before choosing an implementation task. This parent
+is an orientation guide, not another task database or source of permission.
 
-- What are we building and why?
-- What principles are invariant?
-- Which public component owns a concern?
-- What should a new human or AI read next?
-- What private coverage is intentionally omitted?
+## Company, support and privacy
 
-It is a **router and human-readable program front door**.
+Company maintenance and GitHub account placement do not transfer copyright or
+change a component's license. Funding and future support arrangements must
+preserve user control and interoperability. Check each repository's terms;
+a donation does not grant additional rights.
 
-## What this parent repository is not
+Public material contains code, architecture, synthetic fixtures and sanitized
+lessons. Credentials, real household or business records, private deployment
+details and restricted evidence stay out. Private components may exist without
+being listed here.
 
-It is not:
-
-- a monorepo;
-- a second implementation authority;
-- a duplicate planning/task database;
-- a mirror of private deployment topology;
-- a source of runtime permission;
-- a replacement for the owning repository's code, tests, issues,
-  releases, or evidence;
-- a claim that every horizon idea already works.
-
-**Routes point to authority. They do not create it.**
-
-## Two organizational deployment families
-
-The same kernel ideas can serve very different organizations without
-forcing schema parity.
-
-### Household OS
-
-The household deployment can model people, rooms, devices, vehicles,
-school, events, maintenance, food, preferences, projects, routines,
-shared planning, and household history while preserving per-person
-private trust domains.
-
-### Business OS
-
-The business deployment can model people, teams, products, suppliers,
-customers, projects, incidents, compliance, approvals, planning, and
-business-specific integrations under a different trust and policy model.
-
-Household and Business OS are peers in end-state function. Their tables,
-policies, stores, principals, and integrations are allowed to diverge.
-
-Wirespeed additionally serves as downstream business dogfood: useful
-generic lessons can be contributed upstream through normal public-safe
-review without moving private business data or authority with them. See
-[`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-## Build the spaceship while flying it
-
-This platform is already useful while foundational pieces are still
-under construction. Transitional states must therefore be explicit.
-
-For example, the current privileged Supabase MCP is a build/control-plane
-tool. The intended runtime path is principal-bound through the User MCP,
-with database-enforced policy activated through a coordinated cutover
-once it can actually be exercised and proven.
-
-Premature claims of completeness are defects. So is freezing useful
-development because an end-state mechanism cannot yet be safely
-activated.
-
-## Public/private boundary
-
-Public repositories contain generic architecture, code, synthetic
-fixtures, tests, and sanitized lessons.
-
-Private deployments, private repository locators, credentials, real
-household/business data, topology, private planning state, and
-restricted evidence are omitted from this parent by default.
-
-Absence from this public router does **not** mean a private component
-does not exist.
+Keep one implementation owner per task and independent review where needed.
+Merge, release, deployment and publication have separate approval gates.
 
 ## Acceptance
 
@@ -194,7 +101,8 @@ the intent, by someone other than the author.
 The parent becomes accepted only when, at one exact head, all of the
 following are true and Jesse explicitly declares acceptance:
 
-1. Apache-2.0 `LICENSE` is present.
+1. CC BY 4.0 documentation and Apache-2.0 executable-tooling licenses are
+   present with an explicit scope map.
 2. Required Tier-1 CI exists and is green, including the public-boundary
    allowlist check.
 3. No artifact asserts its own currency unless something outside the

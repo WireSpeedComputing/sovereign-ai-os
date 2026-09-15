@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = (
     "LICENSE",
     "README.md",
+    "START-HERE.md",
     "CONTEXT.md",
     "ROUTES.md",
     "THESIS.md",
@@ -50,20 +51,24 @@ REQUIRED_FILES = (
 PUBLIC_CHILD_REPOS = frozenset(
     {
         "jryski/sovereign-memory-core",
+        "jryski/sovereign-memory-protocol",
+        "jryski/Agent-Coordination",
         "jryski/Supabase_user_MCP",
         "jryski/Household-OS",
         "WireSpeedComputing/Sovereign-Vault",
         "jryski/Public_AI_SKills",
     }
 )
-PARENT_REPO = "jryski/sovereign-ai-os"
-ALLOWED_GITHUB_REPOS = PUBLIC_CHILD_REPOS | {PARENT_REPO}
+PARENT_REPO = "WireSpeedComputing/sovereign-ai-os"
+LEGACY_PARENT_REPO = "jryski/sovereign-ai-os"
+ALLOWED_GITHUB_REPOS = PUBLIC_CHILD_REPOS | {PARENT_REPO, LEGACY_PARENT_REPO}
 
 INTERNAL_ROUTE_TARGETS = frozenset(
     {
         "THESIS.md",
         "HORIZON.md",
         "README.md",
+        "START-HERE.md",
         "CONTEXT.md",
         "ROUTES.md",
         "LICENSE",
@@ -471,7 +476,7 @@ def check_routes_table(errors: list[str]) -> None:
             continue
         repo = github_repo_from_url(target)
         if repo:
-            if repo == PARENT_REPO:
+            if repo in {PARENT_REPO, LEGACY_PARENT_REPO}:
                 errors.append(
                     "ROUTES.md: circular parent → parent route row is not "
                     "allowed"

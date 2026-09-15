@@ -8,6 +8,9 @@ Private components exist and are omitted by default.
 
 | Concern | Public route | Authority there | Contribution |
 | --- | --- | --- | --- |
+| Choose a project, test path or contribution | [Start here](START-HERE.md) | Public orientation, not deployment acceptance | orientation |
+| Protocol semantics, provenance, custody and portability | [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | Public drafts and their stated acceptance limits | generic-upstream |
+| Agent deployment and coordination | [Agent Coordination](https://github.com/jryski/Agent-Coordination) | Early public placeholder, not a tested deployment method | generic-upstream |
 | Program purpose and invariant principles | [`THESIS.md`](THESIS.md) | This parent thesis for public program orientation | orientation |
 | Plausible future / bridge to possible | [`HORIZON.md`](HORIZON.md) | Directional horizon only, not current-state evidence | orientation |
 | PostgreSQL reference implementation, custody, recovery, conformance, adversarial evidence | [`jryski/sovereign-memory-core`](https://github.com/jryski/sovereign-memory-core) | Repository code, tests, status, releases, exact-head evidence | generic-upstream |
@@ -54,9 +57,9 @@ downstream parity. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 Use the narrowest owning component:
 
-- **Protocol/meaning question:** follow the accepted protocol/specification
-  route from authorized program context. Do not infer protocol semantics
-  from a deployment repository.
+- **Protocol/meaning question:** use the public SMP route and its stated
+  draft/acceptance limits. Do not infer protocol semantics from a deployment
+  repository.
 - **PostgreSQL behavior or custody proof:** Core.
 - **User/agent identity, capability, RLS/runtime access:** User MCP.
 - **Household ontology, school, assets, family planning, home
