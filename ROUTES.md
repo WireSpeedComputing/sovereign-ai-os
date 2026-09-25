@@ -10,7 +10,7 @@ Private components exist and are omitted by default.
 | --- | --- | --- | --- |
 | Choose a project, test path or contribution | [Start here](START-HERE.md) | Public orientation, not deployment acceptance | orientation |
 | Protocol semantics, provenance, custody and portability | [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | Public drafts and their stated acceptance limits | generic-upstream |
-| Agent deployment and coordination | [Agent Coordination](https://github.com/jryski/Agent-Coordination) | Early public placeholder, not a tested deployment method | generic-upstream |
+| Agent deployment and coordination | [Household OS](https://github.com/jryski/Household-OS) | Household agent interaction and deployment-layer coordination. Household domain only; early docs; not a tested generic agent enrollment platform. The archived placeholder [Agent Coordination](https://github.com/jryski/Agent-Coordination) retains historical issue text only and is not the live route. | generic-upstream |
 | Program purpose and invariant principles | [`THESIS.md`](THESIS.md) | This parent thesis for public program orientation | orientation |
 | Plausible future / bridge to possible | [`HORIZON.md`](HORIZON.md) | Directional horizon only, not current-state evidence | orientation |
 | PostgreSQL reference implementation, custody, recovery, conformance, adversarial evidence | [`jryski/sovereign-memory-core`](https://github.com/jryski/sovereign-memory-core) | Repository code, tests, status, releases, exact-head evidence | generic-upstream |
@@ -63,7 +63,7 @@ Use the narrowest owning component:
 - **PostgreSQL behavior or custody proof:** Core.
 - **User/agent identity, capability, RLS/runtime access:** User MCP.
 - **Household ontology, school, assets, family planning, home
-  integrations:** Household OS.
+  integrations, and household agent interaction:** Household OS.
 - **Business ontology, team operations, business planning:** Sovereign
   Vault for generic public reference; the authorized business deployment
   for business-specific work.
