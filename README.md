@@ -9,7 +9,8 @@ The goal is to keep evidence, decisions, permissions and work history useful
 when models, applications or providers change.
 
 [Website](https://www.wirespeedcomputers.com/) |
-[Component routes](ROUTES.md) | [Project principles](THESIS.md)
+[Component routes](ROUTES.md) | [Project principles](THESIS.md) |
+[North star](NORTHSTAR.md) | [Feature roadmap](FEATURE-ROADMAP.md)
 
 ## What we are building
 
@@ -64,6 +65,9 @@ are different states. This parent does not certify a production-ready bundle.
 - [ROUTES.md](ROUTES.md): which repository owns each concern.
 - [CONTEXT.md](CONTEXT.md): bounded routing for agents.
 - [THESIS.md](THESIS.md): purpose and design principles.
+- [NORTHSTAR.md](NORTHSTAR.md): human-outcome framing, not deployed capability.
+- [FEATURE-ROADMAP.md](FEATURE-ROADMAP.md): proposed capability targets and
+  dependency stages, not launch gates A/B/C or present features.
 - [HORIZON.md](HORIZON.md): future possibilities, not present features.
 - [CONTRIBUTING.md](CONTRIBUTING.md): public-safe contributions and review.
 - [SECURITY.md](SECURITY.md): report security concerns privately.

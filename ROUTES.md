@@ -13,6 +13,8 @@ Private components exist and are omitted by default.
 | Agent deployment and coordination | [Household OS](https://github.com/jryski/Household-OS) | Household agent interaction and deployment-layer coordination. Household domain only; early docs; not a tested generic agent enrollment platform. The archived placeholder [Agent Coordination](https://github.com/jryski/Agent-Coordination) retains historical issue text only and is not the live route. | generic-upstream |
 | Program purpose and invariant principles | [`THESIS.md`](THESIS.md) | This parent thesis for public program orientation | orientation |
 | Plausible future / bridge to possible | [`HORIZON.md`](HORIZON.md) | Directional horizon only, not current-state evidence | orientation |
+| Whole-system human outcome | [`NORTHSTAR.md`](NORTHSTAR.md) | Human-outcome framing for this parent. Not deployed-capability evidence or a permission. | orientation |
+| Proposed capability targets | [`FEATURE-ROADMAP.md`](FEATURE-ROADMAP.md) | Planning guidance and capability stages 1–5. Not launch gates A/B/C, implementation acceptance, or a delivery schedule. | orientation |
 | PostgreSQL reference implementation, custody, recovery, conformance, adversarial evidence | [`jryski/sovereign-memory-core`](https://github.com/jryski/sovereign-memory-core) | Repository code, tests, status, releases, exact-head evidence | generic-upstream |
 | Principal-bound Supabase user/agent runtime access | [`jryski/Supabase_user_MCP`](https://github.com/jryski/Supabase_user_MCP) | Identity/access implementation and its tests/evidence | generic-upstream |
 | Public household-domain architecture and synthetic household patterns | [`jryski/Household-OS`](https://github.com/jryski/Household-OS) | Household reference schemas/contracts/tests only | generic-upstream |
@@ -68,8 +70,9 @@ Use the narrowest owning component:
   Vault for generic public reference; the authorized business deployment
   for business-specific work.
 - **Program-wide purpose or cross-repo orientation:** this parent
-  (`THESIS.md`, `README.md`, this file). Do not add a circular parent
-  repository row to the table above.
+  (`THESIS.md`, `NORTHSTAR.md`, `FEATURE-ROADMAP.md`, `README.md`,
+  this file). Do not add a circular parent repository row to the table
+  above.
 
 If a concern spans repositories, identify the owning contract first. Do
 not copy the same fact into multiple repos to make routing easier.

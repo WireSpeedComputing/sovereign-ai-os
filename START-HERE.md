@@ -23,8 +23,10 @@ to explore or contribute to one.
 | Explore agent deployment and coordination | [Household OS][house] | Household agent interaction and deployment-layer coordination. Household domain only; early docs; not a tested generic agent enrollment platform. The archived placeholder [Agent Coordination][coordination] retains historical issue text only and is not the live route. |
 | Reuse AI working methods | [Public AI Skills][skills] | Versioned skills with personal-use terms; organizational use requires separate permission. |
 
-For the broader rationale, read [the thesis](THESIS.md). For ownership of
-technical concerns, use [the route map](ROUTES.md).
+For the broader rationale, read [the thesis](THESIS.md). For the
+human-outcome framing, read [the north star](NORTHSTAR.md). For proposed
+capability targets, read [the feature roadmap](FEATURE-ROADMAP.md). For
+ownership of technical concerns, use [the route map](ROUTES.md).
 
 ## How the pieces fit
 
@@ -112,8 +114,11 @@ Links and descriptions checked against public repository READMEs on
 Agent Coordination was archived. This is an orientation snapshot, not a
 live deployment audit. Follow each component's current documentation for
 supported behavior. The [horizon](HORIZON.md) describes longer-term
-possibilities, not a feature list. Internal deployments and private
-records are intentionally absent.
+possibilities, not a feature list. The [north star](NORTHSTAR.md) states
+the human outcome. The [feature roadmap](FEATURE-ROADMAP.md) proposes
+capability targets and dependency stages; it does not claim those
+capabilities exist, and its stages are not launch gates A/B/C. Internal
+deployments and private records are intentionally absent.
 
 [mcp-start]: https://github.com/jryski/Supabase_user_MCP/blob/main/docs/GETTING_STARTED.md
 [house]: https://github.com/jryski/Household-OS

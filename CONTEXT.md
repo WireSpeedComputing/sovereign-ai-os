@@ -18,6 +18,10 @@ owning child repo / exact task evidence
   ↓
 THESIS.md when mission/invariants are needed
   ↓
+NORTHSTAR.md for the human-outcome framing
+  ↓
+FEATURE-ROADMAP.md for proposed capability targets
+  ↓
 HORIZON.md only when future direction matters
 ```
 
@@ -28,13 +32,16 @@ Do **not** recursively ingest every repository.
 ### “What is this project?”
 
 Read `README.md`. Read `THESIS.md` when mission or invariant principles
-are needed.
+are needed. Read [`NORTHSTAR.md`](NORTHSTAR.md) for the human-outcome
+framing. That framing is purpose, not deployed-capability evidence.
 
 ### “Where could this go?”
 
 Read `HORIZON.md` after the thesis when future direction matters. Treat
 horizon material as aspiration/dependency planning, not deployed-state
-evidence.
+evidence. Read [`FEATURE-ROADMAP.md`](FEATURE-ROADMAP.md) for proposed
+capability targets and dependency stages. Those stages are not launch
+gates A/B/C, and a listed capability is not an implementation claim.
 
 ### “Where does this concern belong?”
 
