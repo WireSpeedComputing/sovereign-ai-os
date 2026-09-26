@@ -99,44 +99,75 @@ Use a topic branch.
 ### Docs-only merges (locked D3)
 
 Locked **D3** on the GitHub-first operating model allows **docs-only** bot
-merges after required CI is green and an independent reviewer has approved.
-The author and the independent reviewer must be different identities
-(author ≠ reviewer).
+merges only after all of the following are true:
+
+- required CI is green;
+- a distinct GitHub reviewer identity exists (Primary Users F2);
+- that identity has approved the pull request on GitHub;
+- the author and the reviewer are different GitHub identities
+  (author ≠ reviewer).
+
+No D3 bot merge until that distinct GitHub reviewer identity exists.
+Model Channel PASS is not GitHub approval. A shared `jryski` login means
+author ≠ reviewer cannot currently be satisfied on GitHub. Core pull
+request
+[sovereign-memory-core#97](https://github.com/jryski/sovereign-memory-core/pull/97)
+received HTTP 422 “Can not approve your own pull request” when approval
+was attempted through that same login. A comment on the pull request is
+not a GitHub approval.
 
 D3 is not a rule that Primary Users click merge on every docs-only pull
 request. It does not authorize a bot merge of anything outside the narrow
-definition below.
+definition below, and it cannot rewrite this section or the steward map.
 
 Non-docs merges, release, deploy, and access expansion still need Primary
 Users (or explicit delegation). Opening an issue, branch, or pull request
 grants none of those actions.
 
-This section does not install rulesets, does not allow the author to approve
-their own landing, and does not claim that Gate A or Gate B is enforced.
+This section does not install rulesets, does not allow the author to
+approve their own landing, and does not claim that Gate A or Gate B is
+enforced.
 
 ### Docs-only, narrowly
 
 A pull request is docs-only only when every changed file is human-readable
 documentation that does not grant authority, does not describe executable
-agent instructions, and does not change bot, workflow, review, or security
-behavior.
+agent instructions, and does not change bot, workflow, review, security,
+governance, routing, license, or DCO behavior.
 
-The following are **not** docs-only, even when they are Markdown:
+The following are **never** docs-only, even when they are Markdown. A
+docs-only bot merge must not be able to rewrite D3 or the steward map.
+
+Agent-instruction and security surfaces:
 
 - `AGENTS.md`
 - `CONTEXT.md`
 - `CLAUDE.md` and equivalents (other agent-instruction entry points)
 - `.cursor/**`
-- `.github/**` workflows, actions, and templates that change bot behavior
+- `.github/**` in full, with no behavior test: `CODEOWNERS`, issue and
+  pull-request templates, workflows, and every other path under that
+  directory
 - `SECURITY.md`
 - any file that grants or describes executable agent instructions
 
-If a pull request mixes a docs-only file with any exclusion, the whole pull
-request is non-docs and needs Primary Users (or explicit delegation).
+Governance, routing, license, and DCO surfaces:
+
+- `CONTRIBUTING.md` (including this D3 section)
+- `STEWARDS.md`
+- `ROUTES.md`
+- `START-HERE.md`
+- any license or Developer Certificate of Origin document, including
+  `LICENSE`, `LICENSE-CODE`, `DCO.md`, and `COPYRIGHT`
+- any other file that changes governance, routing, license, or DCO terms
+
+If a pull request mixes a docs-only file with any exclusion, the whole
+pull request is non-docs and needs Primary Users (or explicit
+delegation).
 
 Proposed assigning stewards for public routes are in
 [`STEWARDS.md`](STEWARDS.md). That map is proposed only. It is not merge
-authority and it is not Gate A/B enforcement.
+authority and it is not Gate A/B enforcement. Changing `STEWARDS.md` is
+outside docs-only.
 
 ## Validation
 

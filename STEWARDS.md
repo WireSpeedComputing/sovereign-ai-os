@@ -20,39 +20,43 @@ not enforce Gate A or Gate B. It does not describe executable agent
 instructions.
 
 **Author ≠ independent reviewer** on every change. **ATLAS is not an
-independent reviewer for landings it authored.**
+independent reviewer for landings it authored.** Changing this file is
+outside docs-only, so a docs-only bot merge cannot rewrite the map.
 
-| Public route | Proposed assigning steward |
-| --- | --- |
-| This parent, including [Start here](START-HERE.md), [thesis](THESIS.md), and [horizon](HORIZON.md) | grok |
-| [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | locutus |
-| [Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core) | locutus |
-| [Supabase User MCP](https://github.com/jryski/Supabase_user_MCP) | ariadne |
-| [Household OS](https://github.com/jryski/Household-OS) | claude-warden (domain) + grok (scaffolding) |
-| [Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault) public-safe | ATLAS + grok |
-| Public site ([wirespeedcomputers.com](https://www.wirespeedcomputers.com/)) | grok-public |
-| [Agent Coordination](https://github.com/jryski/Agent-Coordination) | *(none proposed)* |
-| [Public AI Skills](https://github.com/jryski/Public_AI_SKills) | *(none proposed)* |
+Each public route has exactly one proposed assigning steward. Anyone
+else listed is supporting only, not a co-assigner.
+
+| Public route | Proposed assigning steward | Supporting (not assigning) |
+| --- | --- | --- |
+| This parent, including [Start here](START-HERE.md), [thesis](THESIS.md), and [horizon](HORIZON.md) | grok | — |
+| [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | locutus | — |
+| [Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core) | locutus | — |
+| [Supabase User MCP](https://github.com/jryski/Supabase_user_MCP) | ariadne | grok (hygiene) |
+| [Household OS](https://github.com/jryski/Household-OS) | claude-warden | grok (scaffolding) |
+| [Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault) public-safe | ATLAS | grok (landing support) |
+| Public site ([wirespeedcomputers.com](https://www.wirespeedcomputers.com/)) | grok-public | — |
+| [Agent Coordination](https://github.com/jryski/Agent-Coordination) | *(none proposed)* | — |
+| [Public AI Skills](https://github.com/jryski/Public_AI_SKills) | *(none proposed)* | — |
 
 How to read a row:
 
-- One cell is one proposed assignment record. A compound cell is still
-  one draft record, not two merge authorities.
+- The assigning-steward column names exactly one role. The supporting
+  column is not a second assigner and is not merge authority.
 - Parent orientation shares grok. Thesis-level review drafted for
   Primary Users or ATLAS is review, not the assigning steward.
 - Memory protocol and Core share locutus. Review by ATLAS in the #14
   draft is not the assigning steward, and ATLAS cannot independently
   review a landing it authored.
-- User MCP assigning steward is ariadne. Hygiene support from grok in
-  the #14 draft is not a second assigning steward.
-- Household OS keeps the drafted pair: claude-warden for domain and
-  grok for scaffolding. Scaffolding is not merge authority.
-- Vault is the public-safe landing pair only (ATLAS + grok). Private
-  business vault work is outside this public map. ATLAS is not an
-  independent reviewer for landings it authored.
-- The public site assigning steward is grok-public. That route is the
-  #14 public-site draft (jryski/WirespeedComputing in the draft text).
-  It is not an implementation row in `ROUTES.md`.
+- User MCP assigning steward is ariadne. Hygiene support from grok is
+  not a second assigning steward.
+- Household OS assigning steward is claude-warden. grok scaffolding is
+  support only.
+- Vault public-safe assigning steward is ATLAS. grok landing support is
+  not a co-assigner. Private business vault work is outside this public
+  map. ATLAS is not an independent reviewer for landings it authored.
+- The public site assigning steward is grok-public. The route is the
+  public website linked in the table. It is not an implementation row
+  in `ROUTES.md`.
 - Agent Coordination and Public AI Skills are public routes with no
   drafted assigning steward. This map does not invent one.
 - Private operational trackers stay omitted until Primary Users name
