@@ -63,6 +63,7 @@ are different states. This parent does not certify a production-ready bundle.
 - [THESIS.md](THESIS.md): purpose and design principles.
 - [HORIZON.md](HORIZON.md): future possibilities, not present features.
 - [CONTRIBUTING.md](CONTRIBUTING.md): public-safe contributions and review.
+- [STEWARDS.md](STEWARDS.md): proposed assigning stewards. Not merge authority and not Gate A/B enforcement.
 - [SECURITY.md](SECURITY.md): report security concerns privately.
 
 Read the owning component before choosing an implementation task. This parent

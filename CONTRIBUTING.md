@@ -94,7 +94,49 @@ A pull request should:
 - pass Tier-1 CI;
 - omit private payload.
 
-Use a topic branch. Do not merge without human approval.
+Use a topic branch.
+
+### Docs-only merges (locked D3)
+
+Locked **D3** on the GitHub-first operating model allows **docs-only** bot
+merges after required CI is green and an independent reviewer has approved.
+The author and the independent reviewer must be different identities
+(author ≠ reviewer).
+
+D3 is not a rule that Primary Users click merge on every docs-only pull
+request. It does not authorize a bot merge of anything outside the narrow
+definition below.
+
+Non-docs merges, release, deploy, and access expansion still need Primary
+Users (or explicit delegation). Opening an issue, branch, or pull request
+grants none of those actions.
+
+This section does not install rulesets, does not allow the author to approve
+their own landing, and does not claim that Gate A or Gate B is enforced.
+
+### Docs-only, narrowly
+
+A pull request is docs-only only when every changed file is human-readable
+documentation that does not grant authority, does not describe executable
+agent instructions, and does not change bot, workflow, review, or security
+behavior.
+
+The following are **not** docs-only, even when they are Markdown:
+
+- `AGENTS.md`
+- `CONTEXT.md`
+- `CLAUDE.md` and equivalents (other agent-instruction entry points)
+- `.cursor/**`
+- `.github/**` workflows, actions, and templates that change bot behavior
+- `SECURITY.md`
+- any file that grants or describes executable agent instructions
+
+If a pull request mixes a docs-only file with any exclusion, the whole pull
+request is non-docs and needs Primary Users (or explicit delegation).
+
+Proposed assigning stewards for public routes are in
+[`STEWARDS.md`](STEWARDS.md). That map is proposed only. It is not merge
+authority and it is not Gate A/B enforcement.
 
 ## Validation
 
