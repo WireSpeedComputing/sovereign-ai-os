@@ -48,20 +48,31 @@ REQUIRED_FILES = (
 
 # Known-good public GitHub repositories. This is an allowlist, not a
 # census of every repository in the program.
+# Live components must appear as ROUTES.md public-route targets and as
+# README.md component links. Archived placeholders may be linked so
+# historical issue text stays findable; they are not required live routes.
 PUBLIC_CHILD_REPOS = frozenset(
     {
         "jryski/sovereign-memory-core",
         "jryski/sovereign-memory-protocol",
-        "jryski/Agent-Coordination",
         "jryski/Supabase_user_MCP",
         "jryski/Household-OS",
         "WireSpeedComputing/Sovereign-Vault",
         "jryski/Public_AI_SKills",
     }
 )
+ARCHIVED_PUBLIC_REPOS = frozenset(
+    {
+        "jryski/Agent-Coordination",
+    }
+)
 PARENT_REPO = "WireSpeedComputing/sovereign-ai-os"
 LEGACY_PARENT_REPO = "jryski/sovereign-ai-os"
-ALLOWED_GITHUB_REPOS = PUBLIC_CHILD_REPOS | {PARENT_REPO, LEGACY_PARENT_REPO}
+ALLOWED_GITHUB_REPOS = (
+    PUBLIC_CHILD_REPOS
+    | ARCHIVED_PUBLIC_REPOS
+    | {PARENT_REPO, LEGACY_PARENT_REPO}
+)
 
 INTERNAL_ROUTE_TARGETS = frozenset(
     {
@@ -481,6 +492,12 @@ def check_routes_table(errors: list[str]) -> None:
                     "ROUTES.md: circular parent → parent route row is not "
                     "allowed"
                 )
+            elif repo in ARCHIVED_PUBLIC_REPOS:
+                errors.append(
+                    f"ROUTES.md: row {index} routes to archived repository "
+                    f"{repo!r}. Archived placeholders may be cited as "
+                    "history; they are not live public routes."
+                )
             elif repo not in PUBLIC_CHILD_REPOS:
                 errors.append(
                     f"ROUTES.md: row {index} routes to unrecognized public "
@@ -571,6 +588,9 @@ def _self_check() -> None:
     assert allowlist_rejected_repos(
         f"https://github.com/{allowlisted}"
     ) == set()
+    archived = "jryski/Agent-Coordination"
+    assert archived not in PUBLIC_CHILD_REPOS
+    assert allowlist_rejected_repos(f"https://github.com/{archived}") == set()
     assert "owner/repo" not in extract_github_targets(
         "see owner/repo in prose"
     )[0]

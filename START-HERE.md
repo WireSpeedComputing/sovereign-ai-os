@@ -20,7 +20,7 @@ to explore or contribute to one.
 | Understand what survives a change of provider | [Sovereign Memory Protocol][smp] | Protocol drafts for provenance, custody, authority and portability. Publication is not proof of conformance. |
 | Build or test the database implementation | [Sovereign Memory Core][core] | An alpha PostgreSQL reference implementation and test harnesses. |
 | Adapt the ideas to a business | [Sovereign Vault][vault] | A business data layer with its own identity and policy boundaries. Read its status and open risks first. |
-| Explore agent deployment and coordination | [Agent Coordination][coordination] | An early public placeholder. Its README currently contains only the project title. |
+| Explore agent deployment and coordination | [Household OS][house] | Household agent interaction and deployment-layer coordination. Household domain only; early docs; not a tested generic agent enrollment platform. The archived placeholder [Agent Coordination][coordination] retains historical issue text only and is not the live route. |
 | Reuse AI working methods | [Public AI Skills][skills] | Versioned skills with personal-use terms; organizational use requires separate permission. |
 
 For the broader rationale, read [the thesis](THESIS.md). For ownership of
@@ -38,10 +38,13 @@ sources, meaning or change history when moving them.
 - **User MCP is the access layer.** It explores application-data access tied
   to a user or agent, rather than granting a model administrative access.
 - **Household OS and Sovereign Vault are application/domain projects.** They
-  address household and business needs respectively. They are not required
-  to share identical schemas, permissions or deployment steps.
-- **Agent Coordination and skills address how agents work.** They do not
-  replace database authorization or make a claimed capability trustworthy.
+  address household and business needs respectively. Household agent
+  interaction and deployment-layer coordination belong in Household OS:
+  household domain only, early docs, not a tested generic enrollment
+  platform. They are not required to share identical schemas, permissions
+  or deployment steps.
+- **Skills address how agents work.** They do not replace database
+  authorization or make a claimed capability trustworthy.
 
 These are related projects, not a tested install-everything bundle. This
 parent repository explains their relationship; each component owns its
@@ -105,10 +108,12 @@ visibility and financial support do not grant additional rights.
 ## About this guide
 
 Links and descriptions checked against public repository READMEs on
-2026-09-15. This is an orientation snapshot, not a live deployment audit.
-Follow each component's current documentation for supported behavior.
-The [horizon](HORIZON.md) describes longer-term possibilities, not a feature
-list. Internal deployments and private records are intentionally absent.
+2026-09-15. The agent-coordination route was revised on 2026-09-25 after
+Agent Coordination was archived. This is an orientation snapshot, not a
+live deployment audit. Follow each component's current documentation for
+supported behavior. The [horizon](HORIZON.md) describes longer-term
+possibilities, not a feature list. Internal deployments and private
+records are intentionally absent.
 
 [mcp-start]: https://github.com/jryski/Supabase_user_MCP/blob/main/docs/GETTING_STARTED.md
 [house]: https://github.com/jryski/Household-OS

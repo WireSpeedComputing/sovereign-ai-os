@@ -43,13 +43,16 @@ existing tools, not replace every assistant or memory engine.
 
 | Component | Purpose and starting point |
 | --- | --- |
-| [Household OS](https://github.com/jryski/Household-OS) | Household reference architecture, workflows and synthetic integration examples. |
+| [Household OS](https://github.com/jryski/Household-OS) | Household reference architecture, workflows and synthetic integration examples. Household agent interaction and deployment-layer coordination live here: household domain only, early docs, not a tested generic agent enrollment platform. |
 | [Supabase User MCP](https://github.com/jryski/Supabase_user_MCP) | Bounded application-data access. Follow its documented synthetic demo and supported-client limits. |
 | [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | Public protocol drafts for provenance, custody, authority and portability. Draft publication is not conformance acceptance. |
 | [Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core) | PostgreSQL reference implementation, tests and scope-specific recovery evidence. |
 | [Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault) | Business-domain data layer with its own policy and identity boundaries. |
-| [Agent Coordination](https://github.com/jryski/Agent-Coordination) | Early public project for coordination work; do not assume a published deployment method. |
 | [Public AI Skills](https://github.com/jryski/Public_AI_SKills) | Reusable working methods. Check the separate personal and organizational-use terms. |
+
+[Agent Coordination](https://github.com/jryski/Agent-Coordination) is an
+archived placeholder. It retains historical issue text only and is not the
+live route for agent deployment or coordination.
 
 Component repositories own their supported behavior, tests, releases and known
 limitations. Public source, passing tests, deployment and independent acceptance
