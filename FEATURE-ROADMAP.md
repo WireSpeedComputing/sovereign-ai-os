@@ -4,9 +4,6 @@
 > The grouping, capability stages, and evaluation criteria below are proposed
 > planning guidance, not implementation acceptance, a delivery schedule, or
 > authorization to deploy, purchase, disclose, or act.
->
-> Note (MC1304): roadmap dependency gates were renamed to capability stages
-> 1–5 so they are not confused with launch gates A/B/C on #52.
 
 ## Scope and interpretation
 
@@ -230,7 +227,7 @@ This table explains contribution, not new assignments or expanded mandates.
 | Supabase User MCP | Verified principal and agent access, bounded capabilities, and authorization evidence for supported profiles. |
 | Household OS | Household entities, resources, commitments, planning, attention semantics, workflow contracts, and provider reconciliation. |
 | Sovereign Vault | Separate business-domain reference behavior with its own policies and identity boundaries. |
-| Agent Coordination and authorized runtimes | Running workers, bounded delegation, and coordination through accepted contracts rather than agent chat as the source of truth. `jryski/Agent-Coordination` is archived; live household agent interaction routes to Household-OS (see sovereign-ai-os #12/#13). |
+| Authorized runtimes and agent coordination (Household-OS) | Running workers, bounded delegation, and coordination through accepted contracts rather than agent chat as the source of truth. `jryski/Agent-Coordination` is archived; live household agent interaction routes to Household-OS (see sovereign-ai-os #12/#13). |
 | Public AI Skills and domain contributions | Reusable working methods and public-safe domain knowledge where compatible with their licenses and ownership. |
 
 A routed implementation issue should name the human outcome, capability family,

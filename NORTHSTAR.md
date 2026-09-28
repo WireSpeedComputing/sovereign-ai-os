@@ -166,8 +166,8 @@ the person rebuilding their life history or surrendering new authority.
 
 This parent owns the human-outcome framing and cross-program orientation.
 [THESIS.md](THESIS.md) retains invariant principles. [FEATURE-ROADMAP.md](FEATURE-ROADMAP.md)
-translates this direction into reusable capability targets and proposed dependency
-gates. [HORIZON.md](HORIZON.md) retains broader future possibilities.
+translates this direction into reusable capability targets and proposed capability
+stages. [HORIZON.md](HORIZON.md) retains broader future possibilities.
 
 [ROUTES.md](ROUTES.md) identifies component ownership. Protocol semantics,
 PostgreSQL implementation, bounded access, domain workflows, and agent execution
