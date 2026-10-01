@@ -78,6 +78,8 @@ INTERNAL_ROUTE_TARGETS = frozenset(
     {
         "THESIS.md",
         "HORIZON.md",
+        "NORTHSTAR.md",
+        "FEATURE-ROADMAP.md",
         "README.md",
         "START-HERE.md",
         "CONTEXT.md",
