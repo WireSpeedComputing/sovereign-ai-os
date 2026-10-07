@@ -2,7 +2,7 @@
 
 **Status:** Accepted direction
 **Effective:** 2026-09-04
-**Authority:** Jesse accepted ruling. Provenance is the accepted
+**Authority:** Project lead accepted ruling. Provenance is the accepted
 decision record, not a model name.
 
 ## Problem
@@ -106,7 +106,7 @@ Cheap execution does not create authority.
 ## Naming consequence
 
 A protocol-name freeze was strongly recommended to stop an expensive
-naming loop. Until Jesse makes a specific naming ruling, do not spend
+naming loop. Until the project lead makes a specific naming ruling, do not spend
 active development cycles on protocol naming unless the name becomes a
 concrete blocker.
 

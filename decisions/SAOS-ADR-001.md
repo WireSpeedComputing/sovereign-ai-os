@@ -2,7 +2,7 @@
 
 **Status:** Accepted
 **Effective:** 2026-08-29
-**Authority:** Jesse direct ruling
+**Authority:** Project lead direct ruling
 **Public purpose:** prevent fresh reviewers from collapsing a staged
 runtime migration into a generic “RLS is off” finding.
 

@@ -187,7 +187,7 @@ This parent uses two meanings of “accepted.” See the Acceptance section
 in [`README.md`](README.md):
 
 - the per-change merit test for ordinary later work;
-- the one-time parent acceptance milestone, declared by Jesse at an
+- the one-time parent acceptance milestone, declared by the project lead at an
   exact head.
 
 This file does not record whether that milestone has been declared.

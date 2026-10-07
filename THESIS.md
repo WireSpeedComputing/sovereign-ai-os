@@ -9,7 +9,7 @@ Git history retains the earlier wording.
 Keep a person's or organization's knowledge, evidence, decisions, permissions
 and work history useful when models, applications and providers change.
 
-WIRE SPEED COMPUTING LLC maintains the program, led by Jesse Ryski. The business
+WIRE SPEED COMPUTING LLC maintains the program. The business
 can track development costs and provide future support or licensing. Those
 arrangements must preserve user control and interoperability. Company maintenance
 does not change existing component licenses or contributors' rights.

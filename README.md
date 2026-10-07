@@ -4,7 +4,7 @@ User-controlled records and bounded tools that work across AI assistants.
 
 **[Start here: choose a project, try a synthetic demo, or contribute](START-HERE.md).**
 
-WIRE SPEED COMPUTING LLC maintains this program, led by Jesse Ryski.
+WIRE SPEED COMPUTING LLC maintains this program.
 The goal is to keep evidence, decisions, permissions and work history useful
 when models, applications or providers change.
 
@@ -95,7 +95,7 @@ Merge, release, deployment and publication have separate approval gates.
 
 This parent uses two different meanings of “accepted.” Do not collapse
 them. This section is durable criteria, not a task tracker, and it does
-not record whether Jesse has declared the milestone.
+not record whether the project lead has declared the milestone.
 
 ### Per-change merit test
 
@@ -107,7 +107,7 @@ the intent, by someone other than the author.
 ### Parent acceptance milestone
 
 The parent becomes accepted only when, at one exact head, all of the
-following are true and Jesse explicitly declares acceptance:
+following are true and the project lead explicitly declares acceptance:
 
 1. CC BY 4.0 documentation and Apache-2.0 executable-tooling licenses are
    present with an explicit scope map.
@@ -119,7 +119,7 @@ following are true and Jesse explicitly declares acceptance:
 5. `SECURITY.md` and `CONTRIBUTING.md` are present, with CONTRIBUTING
    describing the Wirespeed downstream-dogfood → generic upstream
    contribution path.
-6. Jesse declares acceptance at that exact head.
+6. The project lead declares acceptance at that exact head.
 
 Acceptance is a one-time milestone, not a freeze. Ordinary later changes
 use the per-change merit test.
@@ -131,7 +131,7 @@ for their own implementation.
 
 ## License
 
-Copyright 2026 Jesse Ryski.
+Copyright 2026 The Sovereign AI OS Authors.
 
 The documents in this repository are licensed under Creative Commons
 Attribution 4.0 International. See [`LICENSE`](LICENSE).
