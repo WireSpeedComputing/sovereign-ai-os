@@ -239,6 +239,127 @@ new repository simply because another use case appears.
 The parent records direction. Child issues and evidence record delivery. This
 roadmap does not grant agents merge, deployment, disclosure, or spending authority.
 
+## Deferred retrieval explorations
+
+**Status: deferred exploration, unassigned.** These are options to revisit when
+the readiness triggers below are met, with no delivery date or implementation
+commitment. They create no execution tasks and assign no work to Ari or other
+agents. Existing capability families, stages, priorities, and the
+[north star](NORTHSTAR.md) remain the planning frame: less human effort and
+supervision, with user-controlled, replaceable infrastructure.
+
+Both options may support evidence intake, commitment preparation, outcome
+learning, and provider portability (F01, F05, F11, F12). Retrieval remains a
+rebuildable projection over permitted evidence; neither a document tree nor an
+approximate nearest neighbor (ANN) index determines canonical truth, identity,
+access, or accepted decisions.
+
+The [Vault reference retrieval schema][vault-retrieval] provides a comparison
+point: pgvector `vector(384)` embeddings with cosine/HNSW indexing, full-text
+search, model/version metadata, source hashes, and a bounded retrieval envelope.
+That source describes a reference design, not proof of a live embedding pipeline
+or deployment acceptance. Future evaluations must establish the actual deployed
+baseline and preserve its authorization, freshness, provenance, and result
+semantics, including explicit full-text-only and not-evaluated outcomes. The
+authorized subset must constrain ranking and tree traversal, with no leakage
+through summaries, scores, match counts, or caches after permission revocation.
+
+### PageIndex: hierarchical document retrieval
+
+Explore whether document trees and reasoning over sections improve retrieval
+from long, structured sources such as manuals, reports, and curated cookbooks.
+The candidate is `VectifyAI/PageIndex`; its [concepts][pageindex-concepts] and
+[developer documentation][pageindex-docs] are upstream starting points. A possible
+hybrid route would find permitted documents using existing full-text/pgvector
+search, then navigate their sections. It is an optional adapter, not a replacement
+for the durable memory model or a chosen retrieval architecture.
+
+- **Readiness triggers:** a useful document workflow shows repeatable omissions
+  or wrong-section retrieval with the existing baseline; source versioning and
+  principal-bound access are available; a synthetic or public licensed corpus
+  has answerable, unanswerable, and cross-section questions with source locators;
+  model-call and latency budgets can be stated before a trial.
+- **Evaluation criteria:** compare existing full-text/vector retrieval, tree
+  retrieval, and a hybrid on the same corpus and questions. Measure answer and
+  evidence recall, page/section citation correctness, abstention, context size,
+  indexing and refresh cost, p50/p95 latency, token cost, and human corrections.
+  Include source updates, conflicting versions, tables, scans, and multi-document
+  questions; document which cases the chosen local or hosted mode supports.
+- **Risks:** parsing/OCR and tree-summary errors, missed branches, nondeterministic
+  reasoning, prompt injection in documents, stale trees, and extra model calls.
+  Test bounded traversal and fallback; a convincing answer is not retrieval proof.
+- **Supabase and pgvector compatibility:** tree generation/search would run in a
+  separately authorized application worker, not as a presumed Supabase extension
+  or model call inside a database transaction. Any stored tree is derived data
+  tied to immutable source/version identifiers and exact locators. Supabase
+  Storage policies, grants/RLS, and User MCP boundaries must constrain documents,
+  tree summaries, caches, and snippets before they reach a model. Existing
+  pgvector columns, embedding metadata, and full-text fallback remain usable.
+  Local indexing does not imply local model inference; verify provider egress,
+  retention, licensing, and export of trees before using private evidence. Do not
+  assume hosted OCR or corpus-search features exist in the local implementation.
+- **Revisit decision:** proceed beyond exploration only if measured workflow
+  benefit justifies cost and supervision, citations and revocation remain sound,
+  and removing the adapter leaves source evidence and baseline retrieval intact.
+
+### Tiger Data pg_vectorsearch / PRISM: vector-index scaling
+
+Explore `timescale/pg_vectorsearch` and its PRISM (Partitioned Routing Index for
+Similarity Matching) index when vector scale or index maintenance becomes a
+measured constraint. It concerns ANN performance, not document understanding or
+memory governance; it is distinct from `pgvectorscale`/DiskANN.
+The [Tiger Data announcement][prism-announcement] is an upstream starting point,
+not evidence that its large-corpus benchmarks transfer to our workloads.
+
+- **Readiness triggers:** a populated, representative embedding workload has
+  measured recall, latency, RAM, build-time, or maintenance pressure after tuning
+  the existing pgvector baseline. A supported extension/PostgreSQL combination
+  is available in an isolated environment, with a reproducible benchmark and a
+  restore/rollback path. A database upgrade or provider move requires its own
+  approved need; this exploration alone does not justify either.
+- **Evaluation criteria:** compare PRISM with existing pgvector HNSW and, where
+  relevant, IVFFlat and exact search on identical embeddings, metric, filters,
+  hardware, and query sets. Measure recall@k against exact neighbors, p50/p95
+  latency at equal recall, RAM, disk, build/rebuild time, ingestion and update/
+  delete cost, concurrency, and operational cost. Include selective principal
+  filters, cold/warm caches, churn, vacuum/rebalance, crash recovery, and restore.
+- **Risks:** alpha maturity, prerelease upgrade/rebuild requirements, quantization
+  and routing tradeoffs, filtered recall loss, planner surprises, maintenance
+  overhead, and platform/SIMD or PostgreSQL-version differences. The announcement
+  lists filtered streaming search and replication/restore/concurrency hardening
+  as future work, with manual churn rebalancing and rebuilds for deleted space.
+  Verify these limits at evaluation; vendor speed claims are hypotheses to reproduce.
+- **Supabase and pgvector compatibility:** upstream documentation reviewed on
+  2026-10-14 describes alpha status and PostgreSQL 18+ requirements. Verify the
+  pinned upstream revision and the target deployment's actual PostgreSQL version,
+  available extensions, installed versions, privileges, packaging, and upgrade
+  policy before a trial. PostgreSQL 15/16/17 evidence does not establish PRISM
+  support. Supabase hosting of PostgreSQL and support for pgvector do not imply
+  availability of this C extension; consult its [extension documentation][supabase-extensions]
+  and [changelog][supabase-changelog], and establish provider support explicitly.
+  If unavailable, defer or evaluate only in an isolated supported PostgreSQL
+  environment, without changing the hosted deployment.
+- **Preserve the baseline:** upstream describes coexistence with pgvector and
+  indexing existing `vector`/`halfvec` columns via compatible types/operators.
+  Verify this for the exact versions, dimensions, cosine metric/operator class,
+  schema/search path, planner, and existing retrieval functions. Type compatibility
+  is not proof of grant/RLS, principal-filter, or bounded-envelope compatibility.
+  Preserve full-text/hybrid behavior, embedding-model identity, source hashes,
+  citations, and revocation; retain a tested pgvector fallback and demonstrate
+  export/restore without making PRISM indexes the sole durable representation.
+- **Revisit decision:** consider adoption only after material benefit at equivalent
+  recall, authorization correctness, supported operations, and recoverable exit
+  are demonstrated in the owning component. These entries authorize no extension
+  installation, schema migration, deployment, or replacement of pgvector.
+
+[vault-retrieval]: https://github.com/WireSpeedComputing/Sovereign-Vault/blob/main/sql/21_governed_retrieval.sql
+[pageindex-concepts]: https://pageindex.ai/blog/pageindex-intro
+[pageindex-docs]: https://docs.pageindex.ai/
+[prism-announcement]:
+  https://www.tigerdata.com/blog/announcing-pg_vectorsearch-scalable-open-source-vector-search-postgresql
+[supabase-extensions]: https://supabase.com/docs/guides/database/extensions
+[supabase-changelog]: https://supabase.com/changelog
+
 ## Evaluation and open design questions
 
 Evaluate desired outcomes against the overhead required to obtain them:
