@@ -49,7 +49,7 @@ existing tools, not replace every assistant or memory engine.
 | [Sovereign Memory Protocol](https://github.com/jryski/sovereign-memory-protocol) | Public protocol drafts for provenance, custody, authority and portability. Draft publication is not conformance acceptance. |
 | [Sovereign Memory Core](https://github.com/jryski/sovereign-memory-core) | PostgreSQL reference implementation, tests and scope-specific recovery evidence. |
 | [Sovereign Vault](https://github.com/WireSpeedComputing/Sovereign-Vault) | Business-domain data layer with its own policy and identity boundaries. |
-| [Public AI Skills](https://github.com/jryski/Public_AI_SKills) | Reusable working methods. Check the separate personal and organizational-use terms. |
+| [Public AI Skills](https://github.com/jryski/Public_AI_SKills) | Reusable working methods under CC BY 4.0. Personal, organizational and commercial use are permitted; attribution applies when sharing. |
 
 [Agent Coordination](https://github.com/jryski/Agent-Coordination) is an
 archived placeholder. It retains historical issue text only and is not the

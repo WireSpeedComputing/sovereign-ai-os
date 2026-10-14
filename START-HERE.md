@@ -21,7 +21,7 @@ to explore or contribute to one.
 | Build or test the database implementation | [Sovereign Memory Core][core] | An alpha PostgreSQL reference implementation and test harnesses. |
 | Adapt the ideas to a business | [Sovereign Vault][vault] | A business data layer with its own identity and policy boundaries. Read its status and open risks first. |
 | Explore agent deployment and coordination | [Household OS][house] | Household agent interaction and deployment-layer coordination. Household domain only; early docs; not a tested generic agent enrollment platform. The archived placeholder [Agent Coordination][coordination] retains historical issue text only and is not the live route. |
-| Reuse AI working methods | [Public AI Skills][skills] | Versioned skills with personal-use terms; organizational use requires separate permission. |
+| Reuse AI working methods | [Public AI Skills][skills] | Versioned skills under CC BY 4.0. Personal, organizational and commercial use are permitted; attribution applies when sharing. No separate permission is required. |
 
 For the broader rationale, read [the thesis](THESIS.md). For the
 human-outcome framing, read [the north star](NORTHSTAR.md). For proposed
@@ -112,7 +112,9 @@ visibility and financial support do not grant additional rights.
 Links and descriptions checked against public repository READMEs on
 2026-09-15. The agent-coordination route was revised on 2026-09-25 after
 Agent Coordination was archived. This is an orientation snapshot, not a
-live deployment audit. Follow each component's current documentation for
+live deployment audit. The skills reuse description was rechecked against its
+README and license declaration on 2026-10-14. Follow each component's current
+documentation for
 supported behavior. The [horizon](HORIZON.md) describes longer-term
 possibilities, not a feature list. The [north star](NORTHSTAR.md) states
 the human outcome. The [feature roadmap](FEATURE-ROADMAP.md) proposes
