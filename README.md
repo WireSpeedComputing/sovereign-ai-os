@@ -12,6 +12,25 @@ when models, applications or providers change.
 [Component routes](ROUTES.md) | [Project principles](THESIS.md) |
 [North star](NORTHSTAR.md) | [Feature roadmap](FEATURE-ROADMAP.md)
 
+
+## Orientation for people and AI assistants
+
+Each row links the source that supports it. Gaps are stated rather than filled in.
+
+| Question | Where to look |
+| --- | --- |
+| Purpose | [What we are building](#what-we-are-building), [START-HERE.md](START-HERE.md) |
+| Relationships | [Public components](#public-components), [ROUTES.md](ROUTES.md) |
+| Prerequisites | Git and Python 3.11 or later (standard library only) for the parent validator. |
+| Exact commands | Clone [this repository](https://github.com/WireSpeedComputing/sovereign-ai-os), then from its root run `python3 scripts/validate_parent.py` |
+| Allowed / denied results | Allowed: the validator prints `parent validation passed`. Denied: it exits non-zero naming a file outside the allowlist, a missing required file or a broken internal link. |
+| Cleanup | Delete the disposable checkout. The validator writes no files. |
+| Evidence | The [CI workflow](.github/workflows/ci.yml) runs the allowlist, Markdown-structure and link checks on every pull request; see [Acceptance](#acceptance). |
+| Limits | Documentation and decisions only; no component is installed or qualified from here. See [HORIZON.md](HORIZON.md) and [FEATURE-ROADMAP.md](FEATURE-ROADMAP.md). |
+| License | [License](#license): [LICENSE](LICENSE) (documentation) and [LICENSE-CODE](LICENSE-CODE) (code). |
+| Contribute | [CONTRIBUTING.md](CONTRIBUTING.md), [DCO.md](DCO.md) |
+| Security | This repository's [private reporting form](https://github.com/WireSpeedComputing/sovereign-ai-os/security/advisories/new); details in [SECURITY.md](SECURITY.md). |
+
 ## What we are building
 
 1. Keep source evidence, changes and decisions in a store the owner controls.

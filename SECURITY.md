@@ -19,12 +19,11 @@ useful without sensitive evidence, use a private channel instead.
 
 ## Report a vulnerability privately
 
-Prefer [GitHub Private Vulnerability Reporting](https://github.com/jryski/sovereign-ai-os/security/advisories/new)
-when it is available.
+Use this repository's private vulnerability reporting form:
+<https://github.com/WireSpeedComputing/sovereign-ai-os/security/advisories/new>
 
-If private reporting is unavailable, contact the maintainer through the
-[GitHub profile](https://github.com/jryski) without posting sensitive
-details publicly.
+If the form is unavailable, email **jryski@gmail.com** without posting
+sensitive details publicly.
 
 Include, where possible:
 
