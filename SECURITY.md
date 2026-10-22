@@ -22,7 +22,7 @@ useful without sensitive evidence, use a private channel instead.
 Use this repository's private vulnerability reporting form:
 <https://github.com/WireSpeedComputing/sovereign-ai-os/security/advisories/new>
 
-If the form is unavailable, email **jryski@gmail.com** without posting
+If the form is unavailable, email **<jryski@gmail.com>** without posting
 sensitive details publicly.
 
 Include, where possible:

@@ -12,7 +12,6 @@ when models, applications or providers change.
 [Component routes](ROUTES.md) | [Project principles](THESIS.md) |
 [North star](NORTHSTAR.md) | [Feature roadmap](FEATURE-ROADMAP.md)
 
-
 ## Orientation for people and AI assistants
 
 Each row links the source that supports it. Gaps are stated rather than filled in.
