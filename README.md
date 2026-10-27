@@ -59,6 +59,16 @@ Component repositories own their supported behavior, tests, releases and known
 limitations. Public source, passing tests, deployment and independent acceptance
 are different states. This parent does not certify a production-ready bundle.
 
+## Native-first application access
+
+Reuse maintained Supabase application-MCP, authentication and consent components
+where they preserve the component's security contracts. User MCP owns the remaining
+bounded tools, capability/delegation policies and runtime acceptance; this parent
+does not duplicate that implementation or turn a vendor starter into a product claim.
+The [component native-first update](https://github.com/jryski/Supabase_user_MCP/pull/138)
+records the direction, tested candidate and remaining boundaries as a reviewable
+documentation change, not a released or deployed capability.
+
 ## Where to begin
 
 - [START-HERE.md](START-HERE.md): practical starting paths and contribution ideas.

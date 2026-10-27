@@ -71,6 +71,21 @@ Permitted sources and devices
     -> updated context and selective change notifications
 ```
 
+### Reuse native application-access components
+
+Prefer maintained Supabase/MCP discovery, authentication, transport and consent
+mechanics over parallel framework implementations. Concentrate application work
+on useful bounded tools, database policies, delegation, live authorization and
+actual user workflows. Use one implementation owner and independent review rather
+than multiple competing implementations of the same seam.
+
+[User MCP's native-first update](https://github.com/jryski/Supabase_user_MCP/pull/138)
+owns the source/evidence plan. The vendor starter is not a complete storage or
+memory tool catalog. Component credential-boundary decisions, private-domain
+policy and deployment authorization remain separate; do not weaken them through
+parent-roadmap prose. This section does not create another task board or mark any
+capability family delivered.
+
 ### Put dependable operations beside the data
 
 Evaluate existing PostgreSQL and Supabase capabilities before adding a service:
