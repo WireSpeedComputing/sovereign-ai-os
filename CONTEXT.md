@@ -54,6 +54,16 @@ This public parent is not the task authority. Use the authorized
 planning/work surface supplied by the principal or deployment. If none
 is available, do not invent current priority from this repository.
 
+### “Should I build another MCP authentication or transport layer?”
+
+Read the owning User MCP source and its
+[native-first update](https://github.com/jryski/Supabase_user_MCP/pull/138).
+Inspect workspace dependencies and the exact candidate before concluding that
+native support is absent. Reuse maintained vendor components where they preserve
+the accepted boundary; focus local work on application tools and enforcing policy.
+A vendor example does not accept a credential-boundary exception or grant a
+production rollout. This router is a pointer, not a second implementation plan.
+
 ### “Am I allowed to change X?”
 
 This file cannot answer that. Resolve authority from the owning
